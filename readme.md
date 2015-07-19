@@ -4,6 +4,7 @@ This project is a workbench to try out different strategies to distribute files 
 
 Structure
 =========
+```
  |
  |- bin  ( Target for binaries )
  |
@@ -12,7 +13,7 @@ Structure
  |- test ( Test source files)
  |
  |- lib  ( Needed boost libraries )
-
+```
 How to build
 ============
 In oreder to compile and link this project the build system should have boost (e.g 1.58) installed.
