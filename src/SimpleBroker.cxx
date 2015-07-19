@@ -27,14 +27,10 @@ std::shared_ptr<Node> SimpleBroker::storeOnMinUsageNode(const NodeVector& nodes,
   
   // Iterate through the vector and try to find a node where
   // the name doesn't exists
-  while (!nodesByOccupancy.empty())
+  for ( auto iter = nodesByOccupancy.begin(); iter != nodesByOccupancy.end(); iter++)
   {
-    std::shared_ptr<Node> node = nodesByOccupancy.front();
-    if (node->containsFile(name))
-    {
-      nodesByOccupancy.erase(nodesByOccupancy.begin());
-    }
-    else
+    std::shared_ptr<Node> node = *iter;
+    if (!node->containsFile(name))
     {
       node->put(name, data);
       usedNode = node;
@@ -79,7 +75,7 @@ void SimpleBroker::printFileNodeMappingsToStream(std::ostream &stream)
     stream << filename << " stored on ";
     auto dataMapList = _dataDistributionMap[filename];
 
-    // Per design of this broker we have only one entry pro file.
+    // Per design of this broker we have only one entry per file.
     // So we don't need to iterate through the vector
     auto dataMap = dataMapList.front();
     printNodeWithStatusToStream(stream, dataMap->node());
