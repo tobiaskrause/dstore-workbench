@@ -16,7 +16,7 @@ Structure
 ```
 How to build
 ============
-In oreder to compile and link this project the build system should have boost (e.g 1.58) installed.
+In order to compile and link this project the build system should have boost (e.g 1.58) installed.
 In case the boost libraries are not installed system wide you can symlink the lib folder to your boost installation.  
 
 Tested with gcc 4.4.7
