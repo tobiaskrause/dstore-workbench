@@ -90,7 +90,7 @@ class Broker
    * the algorithm distribute the file it could be possible
    * that a file is splitted into parts and/or replicated.
    *
-   * @param nodes A list of nodes for distrute the given file 
+   * @param nodes A list of nodes for distribute the given file 
    * @param name The file name
    * @param data The content of the file
    * @return A list of the location of file parts

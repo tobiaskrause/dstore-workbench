@@ -124,7 +124,7 @@ class SimpleBroker : public Broker
   /*
    * Method to distribute the file on the node with the smallest occupancy.
    *
-   * @param nodes A list of nodes for distrute the given file 
+   * @param nodes A list of nodes for distribute the given file 
    * @param name The file name
    * @param data The content of the file
    * @returns A list of the location of file parts
@@ -145,7 +145,7 @@ class SimpleBroker : public Broker
    * Writes details to the file - node mapping to a provided stream.
    * Node names in ...
    *               ... green means that the node is active.
-   *               ... red menas that the node is inactive and no more availible
+   *               ... red means that the node is inactive and no more availible
    *                   all data on such are node are lost.
    *
    * @param stream The stream to writes to
