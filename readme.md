@@ -41,4 +41,4 @@ In case a node gets unavailable all data on this node are lost.
 
 Replicate
 ---------
-The implementation of this strategy can be found in ReplicateBroker(.h). It uses the same round robin mechanism to balance the occupancy between the nodes. But it addtional add a replicate of the file to the network to minimize the chance of data lost after a node become unavailable.
+The implementation of this strategy can be found in ReplicateBroker(.h). It uses the same round robin mechanism to balance the occupancy between the nodes. But it additional add a replicate of the file to the network to minimize the chance of data lost after a node become unavailable.
